@@ -13,7 +13,7 @@
   }
 
   // Reveal on scroll
-  const targets = document.querySelectorAll('.section > *, .hero-text, .hero-photo');
+  const targets = document.querySelectorAll('.section > *');
   if (!reduceMotion && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {

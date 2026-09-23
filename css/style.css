@@ -55,6 +55,8 @@ figure { margin: 0; }
 .hand { font-family: var(--hand); font-weight: 600; color: var(--candle); letter-spacing: 0.02em; }
 .eyebrow { font-size: 1.5rem; margin: 0 0 4px; line-height: 1.2; }
 .sp { display: none; }
+.ln { display: block; white-space: nowrap; }
+.ln-i { display: inline-block; }
 
 /* Header */
 .site-header {
@@ -100,7 +102,7 @@ figure { margin: 0; }
   display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(32px, 6vw, 80px); align-items: center;
 }
 .hero-lead { font-size: 1.7rem; margin: 0 0 12px; transform: rotate(-2deg); transform-origin: left; display: inline-block; }
-.hero h1 { font-size: clamp(1.65rem, 4.2vw, 3rem); line-height: 1.55; letter-spacing: 0.08em; margin-bottom: 28px; }
+.hero h1 { font-size: clamp(1.6rem, 3.9vw, 2.9rem); line-height: 1.55; letter-spacing: 0.08em; margin-bottom: 28px; }
 .hero-sub { color: var(--ink-soft); max-width: 36em; }
 .hero-facts { display: flex; flex-wrap: wrap; gap: 12px 36px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
 .hero-facts li { display: flex; flex-direction: column; line-height: 1.4; }
