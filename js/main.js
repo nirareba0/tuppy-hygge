@@ -19,7 +19,7 @@
       entries.forEach((e) => {
         if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px' });
+    }, { rootMargin: '0px 0px -4% 0px', threshold: 0.01 });
     targets.forEach((el) => { el.classList.add('reveal'); io.observe(el); });
   }
 
@@ -72,7 +72,7 @@
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(40, w0 / h0, 1, 1000);
-    camera.position.z = w0 < 600 ? 330 : 270;
+    camera.position.z = w0 < 600 ? 360 : 290;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -97,7 +97,7 @@
       const r = Math.sqrt(1 - y * y);
       const t = golden * i;
       const pos = new THREE.Vector3(Math.cos(t) * r * R, y * R, Math.sin(t) * r * R);
-      const scale = 34 / Math.max(w, h);
+      const scale = 46 / Math.max(w, h);
       const mat = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, transparent: true, opacity: 0 });
       const mesh = new THREE.Mesh(new THREE.PlaneGeometry(w * scale, h * scale), mat);
       loader.load(`images/${name}-s.webp`, (tex) => {
@@ -150,7 +150,7 @@
       const w = stage.clientWidth;
       const h = stage.clientHeight;
       camera.aspect = w / h;
-      camera.position.z = w < 600 ? 330 : 270;
+      camera.position.z = w < 600 ? 360 : 290;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
     });
