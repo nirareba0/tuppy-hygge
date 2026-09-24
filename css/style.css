@@ -222,6 +222,9 @@ figure { margin: 0; }
 .site-footer { background: var(--paper-2); text-align: center; padding: 48px var(--gutter); }
 .footer-line { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 12px; }
 .footer-meta { font-size: 0.78rem; color: var(--ink-mute); margin: 0; }
+.footer-credit { font-size: 0.78rem; color: var(--ink-mute); margin: 16px 0 0; padding-top: 16px; border-top: 1px solid var(--line); display: inline-block; }
+.footer-credit a { color: var(--ink-soft); text-underline-offset: 3px; }
+.footer-credit a:hover { color: var(--candle); }
 
 /* Reveal */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
